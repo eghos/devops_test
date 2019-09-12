@@ -1,9 +1,9 @@
 module.exports = {
-  redisHost: process.env.REDIS_HOST,
-  redisPort: process.env.REDIS_PORT,
-  pgUser: process.env.PGUSER,
-  pgHost: process.env.PGHOST,
-  pgDatabase: process.env.PGDATABASE,
-  pgPassword: process.env.PGPASSWORD,
-  pgPort: process.env.PGPORT
+  redisHost: redis.brbxsz.0001.euw1.cache.amazonaws.com,
+  redisPort: 6379,
+  pgUser: pguser,
+  pgHost: pgdatabase.cpkxqc4m7ojs.eu-west-1.rds.amazonaws.com,
+  pgDatabase: pgdatabase,
+  pgPassword: pgpassword,
+  pgPort: 5432
 };
