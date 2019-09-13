@@ -41,7 +41,7 @@ I wanted to use chef-solo along with this, but I thought it would be pointless s
 
 ## Part Deployment
 Just run the fullstack.tf file. That is enough to load the frontend using the load balancer DNS name
-## Full deployment
+## Full Deployment
 Create Redis and Posgresql instances , and use the credentials in the keys.js files in Server and Worker projects
 
 
