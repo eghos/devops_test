@@ -50,21 +50,31 @@ Create Redis and Posgresql instances , and use the credentials in the keys.js fi
 In real world, a lot could be done differently, but here are some of the things I would do:
 
 -- Use certificates
+
 -- Clean up files in the frontend
+
 -— Separate variables out - no hardcoding 
+
 —- Each of server, worker, frontend and alb should perhaps have their security groups, which are used as source in ingress rules 
+
 —- Separate repos for the worker, server, frontend
+
 —- Terraform structured properly so modules are reused 
-—- Config management tool
--- Put instances in private subnet and reach the internet via NAT
--- Use bastion to ssh to them
-—- Secured NACL
+
+—- Use config management tool
+
+-- Put instances in private subnets and reach the internet via NAT
+
+-- Use bastion hosts to access EC2s
+
+—- Secure the  NACL
+
 -- ASG & Lifecycle hooks
 
 ------I guess many more 
 
 # CONLUSION
-This is the app that is deployed to my Kubernetes cluster in GCP, actually adapted it a bit to suit this test. 
+This is the app that is deployed to my Kubernetes cluster in GCP, actually adapted it a bit to suit this test. There will be flaws,  but this is due to the fact that I had limited time. I promised I will deliver it this afternoon and I only worked on it after work yesterday (Thurs) and intermittently today. 
 
 
 
