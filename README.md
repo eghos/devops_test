@@ -1,6 +1,6 @@
 #DevOps Test
 
-#APPLICATION
+# APPLICATION
 
 The application is a simple application, which I currently use to play arounf in my Kubernetes cluster.
 It basically takes a number(index) as an input and does some Fibonacci calculation with it.
@@ -10,7 +10,7 @@ This is a complete stack app, which consist of a reactJS frontend, the backend -
 ## How it works
 you enter a number, and the server sends the number to a redis cache as well as the postgresql database. The essence of redis is store the indices and calculated values as key value pairs. The worker basically fetches the number, does the calculation and sends the result back to redis, while the database maintains a permanent list of indices that have been entered.
 
-#THE COMPONENTS
+# THE COMPONENTS
 
 ## Load Balancer
 I have used an application load balancer in front of the application. The load balancer is using path-based routing, and using listener rules to route traffic to target groups. There are two target grooups - the frontend and api(backend). By default the load balancer would load the frontend as expected, but when number is entered and submiited(post), or calculated value retrieved(get),the traffic is captured in the backend as "/api" as seen in Fib.js in the Server.
@@ -33,10 +33,11 @@ Both were created manually in AWS and endpoints and other credentials  used in k
 ## Network
 I have used my existing VPC and subnets
 
-#REDUCING COMPLEXITY
+# REDUCING COMPLEXITY
+
 I wanted to use chef-solo along with this, but I thought it would be pointless since it will achieve the same result if I bootstrap the installations. The idea is to reduce complexity and maximise time while achieveing the same result. But in real world, Chef or any other config management tool might suffice to maintain consistency across the board.
 
-#DEPLOYMENT
+# DEPLOYMENT
 
 ## Part Deployment
 Just run the fullstack.tf file. That is enough to load the frontend using the load balancer DNS name
@@ -44,7 +45,8 @@ Just run the fullstack.tf file. That is enough to load the frontend using the lo
 Create Redis and Posgresql instances , and use the credentials in the keys.js files in Server and Worker projects
 
 
-#WHAT COULD BE DONE BETTER IN DEV
+# WHAT COULD BE DONE BETTER IN DEV
+
 In real world, a lot could be done differently, but here are some of the things I would do:
 
 -- Use certificates
@@ -61,7 +63,7 @@ In real world, a lot could be done differently, but here are some of the things 
 
 ------I guess many more 
 
-#CONLUSION
+# CONLUSION
 This is the app that is deployed to my Kubernetes cluster in GCP, actually adapted it a bit to suit this test. 
 
 
