@@ -74,7 +74,7 @@ In real world, a lot could be done differently, but here are some of the things 
 ------I guess many more 
 
 # CONLUSION
-This is the app that is deployed to my Kubernetes cluster in GCP, actually adapted it a bit to suit this test. There will be flaws,  but this is due to the fact that I had limited time. I promised I will deliver it this afternoon and I only worked on it after work yesterday (Thurs) and intermittently today. 
+This is the app that is deployed to my Kubernetes cluster in GCP, actually adapted it a bit to suit this test.
 
 
 
